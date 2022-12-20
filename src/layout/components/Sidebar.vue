@@ -2,7 +2,7 @@
   <div class="sidebar-wrap">
     <div class="sidebar-logo-container">
       <img
-        src="@assets/images/ezlogo.png"
+        src="@assets/images/logo.png"
         alt=""
         class="sidebar-logo"
         :style="{ 'margin-right': !isCollapse ? '10px' : 0 }"
@@ -14,7 +14,7 @@
         :default-active="activeMenu"
         class="el-menu-vertical-demo"
         :collapse="isCollapse"
-        background-color="#595f64"
+        background-color="rgb(35, 50, 67)"
         text-color="#ffffff"
         active-text-color="#ffffff"
         router
@@ -54,14 +54,12 @@ export default {
   },
   computed: {
     activeMenu() {
-      // console.log(this.$route);
       let path = this.$route.path;
       return path;
     },
   },
   created() {
     console.log(this.activeMenu);
-    // console.log(this.$route);
     this.menuList = this.$menu;
   },
 };
@@ -72,21 +70,21 @@ export default {
 @import "@styles/mixin.scss";
 
 $fontColor: #ffffff;
+//   --sidebar-second-bak:rgb(55,68,77);
 .sidebar-wrap {
   height: 100%;
   overflow: hidden;
   width: $sideBarWidth;
-  background-color: rgb(89, 95, 100);
+  background-color: $sideBarBkColor;
   color: $fontColor;
   transition: width 0.3s ease-in-out;
 
   .sidebar-logo-container {
-    // height: 60px;
     width: 100%;
+    background-color: rgb(0, 0,0);
     @include flex(center);
     .sidebar-logo {
-      height: 70px;
-      width: 70px;
+      height: 60px;
     }
   }
 }
