@@ -1,11 +1,14 @@
 const { defineConfig } = require('@vue/cli-service')
 const path = require('path')
 
+// const htmlWebpackPlugin=require('html-webpack-plugin')
+
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
 module.exports = defineConfig({
+  publicPath:'./',
   configureWebpack: {
     resolve: {
       alias: {
@@ -19,7 +22,10 @@ module.exports = defineConfig({
         '@utils':resolve('src/utils'),
         '@views':resolve('src/views')
       }
-    }
+    },
+    // plugins: [
+    //   new htmlWebpackPlugin({template:'./public/index.html',title:'mdd-template',url:'./'})
+    // ]
   },
   devServer: {
 		port: process.env.VUE_APP_CLI_PORT,

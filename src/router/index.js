@@ -124,6 +124,31 @@ export const routes = [
     ],
   },
   {
+    path:'/table',
+    component:Layout,
+    meta: { icon: 'fa fa-th-list', title: '表格', seq: 5 },
+    children:[
+      {
+        path:'dynamicTable',
+        name:'dynamicTable·',
+        component:()=>import('@views/table/dynamicTable.vue'),
+        meta:{title:'动态表格',seq:1}
+      },
+      {
+        path:'dragTable',
+        name:'dragTable',
+        component:()=>import('@views/table/dragTable.vue'),
+        meta:{title:'拖拽表格',seq:2}
+      },
+      {
+        path:'eidtTable',
+        name:'eidtTable',
+        component:()=>import('@views/table/eidtTable.vue'),
+        meta:{title:'行内编辑',seq:3}
+      },
+    ]
+  },
+  {
     path: '/user',
     component: Layout,
     children: [
