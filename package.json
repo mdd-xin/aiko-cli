@@ -1,6 +1,6 @@
 {
   "name": "mdd-tem",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "快速构建基于vue各版本的网站",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "type": "module",
   "keywords": [],
-  "private":false,
+  "private": false,
   "author": "mddd",
   "license": "ISC",
   "dependencies": {
