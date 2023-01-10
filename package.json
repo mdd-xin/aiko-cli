@@ -1,7 +1,7 @@
 {
-  "name": "firstcli",
+  "name": "mdd-tem",
   "version": "1.0.0",
-  "description": "",
+  "description": "快速构建基于vue各版本的网站",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,15 +11,14 @@
   },
   "type": "module",
   "keywords": [],
-  "author": "",
+  "private":false,
+  "author": "mddd",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.2.0",
     "commander": "^9.4.1",
     "inquirer": "^9.1.4",
-    "ora": "^6.1.2"
-  },
-  "devDependencies": {
+    "ora": "^6.1.2",
     "mkdirp": "^1.0.4",
     "unplugin-auto-import": "^0.12.1"
   }

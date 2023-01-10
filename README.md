@@ -11,3 +11,6 @@
 ### vue3-template
 
 - :pineapple: pinia
+
+vue 的使用过程
+vue create demo=>在当前文件夹下生成文件
