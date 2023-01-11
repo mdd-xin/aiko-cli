@@ -1,13 +1,13 @@
-import VueRouter from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [
   { path: '/', component: () => import('../views/mddHome.vue') },
   { path: '/about', component: () => import('../views/mddHome.vue') },
-]
+];
 
-const router = VueRouter.createRouter({
-  history: VueRouter.createWebHashHistory(),
+const router = createRouter({
+  history: createWebHashHistory(),
   routes, // `routes: routes` 的缩写
-})
+});
 
-export default router
+export default router;

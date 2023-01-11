@@ -228,7 +228,7 @@ module.exports = {
         allowTemplateLiterals: true,
       },
     ],
-    semi: [1, 'never'],
+    semi: [0, 'never'],
     'semi-spacing': [
       2,
       {
