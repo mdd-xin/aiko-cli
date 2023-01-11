@@ -33,7 +33,7 @@ module.exports = {
     ],
     'vue/singleline-html-element-content-newline': 'off',
     'vue/multiline-html-element-content-newline': 'off',
-    // 'vue/name-property-casing': [1, ['error', 'PascalCase' | 'kebab-case']],
+    'vue/name-property-casing': ['error', 'PascalCase'],
     'vue/no-v-html': 'off',
     'accessor-pairs': 2,
     'arrow-spacing': [
@@ -57,19 +57,19 @@ module.exports = {
         properties: 'always',
       },
     ],
-    'comma-dangle': [1, 'only-multiline'],
+    'comma-dangle': [2, 'never'],
     'comma-spacing': [
-      1,
+      2,
       {
         before: false,
         after: true,
       },
     ],
-    'comma-style': [1, 'last'],
+    'comma-style': [2, 'last'],
     'constructor-super': 2,
     curly: [2, 'multi-line'],
     'dot-location': [2, 'property'],
-    'eol-last': 0,
+    'eol-last': 2,
     eqeqeq: ['error', 'always', { null: 'ignore' }],
     'generator-star-spacing': [
       2,
@@ -279,4 +279,4 @@ module.exports = {
     ],
     'array-bracket-spacing': [2, 'never'],
   },
-};
+}
