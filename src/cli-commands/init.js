@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 import { program } from 'commander'
 import { copyDir } from '../utils/copyDir.js'
+import { isDirExist } from '../utils/basic.js'
 
 import ora from 'ora' //加载
 import chalk from 'chalk' //彩色终端文字
 import inquirer from 'inquirer' //创建项目时,回答问题
-
-// 引入init文件=>在本地创建一个项目文件夹=>将文件直接拷贝到文件夹中
-// yyy dev=>本地开发命令=>运行webpack
-// yyy build=>生产环境打包命令
 
 /**
  * TODO:
@@ -30,22 +27,21 @@ program
           type: 'list',
           message: '请选择框架及框架版本',
           name: 'frame',
-          default: 'vue2.x',
-          choices: ['vue2.x', 'vue3.x'],
+          default: 'vue_2.0',
+          choices: ['vue_2.0', 'vue_3.0'],
         },
       ])
-      .then((answers) => {
+      .then(async (answers) => {
         // 根据选择结果进行框架搭建
-        console.log(chalk.blue('answers'), answers)
-        let tar_path = './' + name
-        let { frame } = answers
-        if (frame == 'vue2.x') {
-          copyDir('./template/vue_2.0', tar_path)
+        let isExit = await isDirExist(name)
+        if (!isExit) {
+          copyDir(name, answers.frame)
         } else {
-          copyDir('./template/vue_3.0', tar_path)
+          console.log(chalk.red(`${name}<—该文件已经存在!`))
         }
       })
       .catch((error) => {
+        console.log(chalk.red(error))
         if (error.isTtyError) {
           // Prompt couldn't be rendered in the current environment
         } else {

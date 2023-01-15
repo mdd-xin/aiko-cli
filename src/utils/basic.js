@@ -1,4 +1,5 @@
 import fs from 'fs'
+import path from 'path'
 
 class Result {
   constructor(err, data) {
@@ -37,5 +38,21 @@ export function isDir(path) {
       let state = stat.isDirectory()
       reslove(new Result(err, state))
     })
+  })
+}
+
+export function isDirExist(ProjectName) {
+  return new Promise((resolve, reject) => {
+    fs.access(
+      path.resolve(process.cwd(), ProjectName),
+      fs.constants.F_OK,
+      (err) => {
+        if (err) {
+          resolve(false)
+        } else {
+          resolve(true)
+        }
+      }
+    )
   })
 }
