@@ -9,10 +9,10 @@
 
 ### aiko-cli
 
-> npm i aiko-cli -g
+`npm i aiko-cli -g`
 
-> cd [project]
+`cd [project]`
 
-> npm install
+`npm install`
 
 <!-- - :pineapple: pinia -->
