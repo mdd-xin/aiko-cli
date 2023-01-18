@@ -41,6 +41,14 @@ export function isDir(path) {
   })
 }
 
+export function rmdir(path) {
+  return new Promise((reslove, reject) => {
+    fs.rmdir(path, (err) => {
+      reslove()
+    })
+  })
+}
+
 export function isDirExist(ProjectName) {
   return new Promise((resolve, reject) => {
     fs.access(
