@@ -30,7 +30,7 @@ program
         if (!isExit) {
           copyDir(name, frameMap[answers.frame])
         } else {
-          console.log(chalk.bgRed.bold(`${name}<—该文件已经存在!`))
+          console.log(chalk.bgRed.bold(`❗❗❗ ${name}<—该文件已经存在!`))
         }
       })
       .catch((error) => {

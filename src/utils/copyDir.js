@@ -38,8 +38,8 @@ export async function copyDir(proName, frame) {
             cloneTemFail(proName, frame)
           } else {
             console.log(chalk.bgBlue.bold(`\n模板拉取成功✨✨`))
-            console.log(chalk.greenBright(`\n1. cd ${proName}`))
-            console.log(chalk.greenBright(`\n2. npm install `))
+            console.log(chalk.greenBright(`\n🍟1. cd ${proName}`))
+            console.log(chalk.greenBright(`\n🥙2. npm install `))
           }
         }
       })
@@ -51,7 +51,7 @@ function cloneTemFail(proName, frame) {
   inquirer
     .prompt({
       type: 'confirm',
-      message: '拉取失败,是否重新进行拉取?',
+      message: '❗❗❗拉取失败,是否重新进行拉取?',
       name: 'isRetry',
       default: true,
     })
@@ -64,7 +64,9 @@ function cloneTemFail(proName, frame) {
           })
         } else {
           console.log(
-            chalk.bgWhite.bold('\n可能网络存在问题,请检查网络后重新进行拉取~\n')
+            chalk.bgWhite.bold(
+              '\n📵可能网络存在问题,请检查网络后重新进行拉取~\n'
+            )
           )
         }
       }
