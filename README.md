@@ -1,16 +1,18 @@
 <center>
-<font face="华文彩云" size="12">Mdd</font><br>
-<font face="方正舒体">快速构建各种框架模板</font>
+<p align='center'>
+<b>Aiko-Cli</b><sup></sup><br>
+</p>
 
 </center>
 
 ---
 
-### mdd-cli
+### aiko-cli
 
-### vue3-template
+> npm i aiko-cli -g
 
-- :pineapple: pinia
+> cd [project]
 
-vue 的使用过程
-vue create demo=>在当前文件夹下生成文件
+> npm install
+
+<!-- - :pineapple: pinia -->
