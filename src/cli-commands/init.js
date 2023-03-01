@@ -9,7 +9,7 @@ import inquirer from 'inquirer' //创建项目时,回答问题
 const frameMap = {
   'vue_2.0': 'vue2',
   'vue_3.0': 'vue3',
-  vite_tem_vue3: 'vite_vue_3.0',
+  'vite_vue_3.0': 'vite-vue3',
 }
 
 program

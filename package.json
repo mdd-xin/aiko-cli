@@ -1,6 +1,6 @@
 {
   "name": "aiko-cli",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "快速构建基于vue各版本的网站",
   "main": "index.js",
   "scripts": {
