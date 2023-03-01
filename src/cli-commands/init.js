@@ -9,6 +9,7 @@ import inquirer from 'inquirer' //创建项目时,回答问题
 const frameMap = {
   'vue_2.0': 'vue2',
   'vue_3.0': 'vue3',
+  vite_tem_vue3: 'vite_vue_3.0',
 }
 
 program
@@ -22,7 +23,7 @@ program
           message: '请选择框架及框架版本',
           name: 'frame',
           default: 'vue_3.0',
-          choices: ['vue_2.0', 'vue_3.0'],
+          choices: ['vue_2.0', 'vue_3.0', 'vite_vue_3.0'],
         },
       ])
       .then(async (answers) => {
